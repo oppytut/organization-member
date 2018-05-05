@@ -1,0 +1,8 @@
+@font-face {
+	font-family: Ubuntu-Regular;
+	src: url(/font/Ubuntu-Regular.ttf);
+}
+
+body {
+	font-family: Ubuntu-Regular;
+}
