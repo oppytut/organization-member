@@ -26,7 +26,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="-190"
+     inkscape:cx="-684.28572"
      inkscape:cy="788.57143"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
@@ -53,7 +53,7 @@
      inkscape:groupmode="layer"
      id="layer1">
     <rect
-       style="fill:#ff9200;fill-opacity:1;stroke-width:0.18887372"
+       style="fill:#4cb6e0;fill-opacity:1;stroke-width:0.18887372"
        id="rect821"
        width="179.16025"
        height="179.16025"
@@ -64,7 +64,7 @@
        ry="31.113771" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffe5c3;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:0.26458332;"
        x="-31.984404"
        y="137.78406"
        id="text817"
@@ -74,6 +74,6 @@
          id="tspan815"
          x="-31.984404"
          y="137.78406"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:176.3888855px;font-family:'Kitten Swash';-inkscape-font-specification:'Kitten Swash';fill:#ffe5c3;fill-opacity:1;stroke-width:0.26458332;">O</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:176.3888855px;font-family:'Kitten Swash';-inkscape-font-specification:'Kitten Swash';fill:#ffffff;fill-opacity:1;stroke-width:0.26458332;">O</tspan></text>
   </g>
 </svg>
