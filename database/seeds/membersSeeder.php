@@ -21,7 +21,7 @@ class membersSeeder extends Seeder
 				'tanggal_lahir' => $faker->date($format = 'Y-m-d', $max = '2000-01-01'),
 				'nomor_telepon' => $faker->phoneNumber,
 				'alamat' => $faker->streetAddress,
-				'foto' => $faker->imageUrl(50, 50, 'people')
+				'foto_img' => $faker->imageUrl(50, 50, 'people')
 			]);
 		}
 	}
