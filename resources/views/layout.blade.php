@@ -43,7 +43,7 @@
 					background: #dfdfdf;
 					color: rgba(135, 135, 135, 0.91);
 					font-size: 12px;
-					height: 45px;
+					height: 50px;
 					padding: 10px;
 				">
 					Handcrafted with

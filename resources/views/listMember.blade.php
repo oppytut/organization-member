@@ -9,9 +9,9 @@
 @section('content')
 	<div class="row">
 		<div class="col" style="
-			padding: 15px 10px 0px 10px;
+			padding: 20px 10px 0px 10px;
 			background: white;
-			min-height: 580px;
+			min-height: 640px;
 			font-size: 12px;
 		">
 			<table id="example" class="table table-hover table-borderless table-responsive-sm" style="font-size: 12px;">
@@ -85,9 +85,6 @@
 		</div>
 	</div>
 @endsection
-
-<!-- Modal -->
-@include('viewMemberModal')
 
 @section('js')
 	<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.16/datatables.min.js"></script>
