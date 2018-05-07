@@ -41,14 +41,14 @@
 			<div class="row">
 				<div class="col text-center" style="
 					background: #dfdfdf;
-					color: #676767;
+					color: rgba(135, 135, 135, 0.91);
 					font-size: 12px;
-					height: 60px;
-					padding: 15px;
+					height: 45px;
+					padding: 10px;
 				">
 					Handcrafted with
-					<i class="fas fa-heart" style="color: #ff006c;"></i>
-					by <b><a href="https://github.com/oppytut" style="text-decoration: none; color: #676767;" target="_blank">Oppytut</a></b>
+					<i class="fas fa-heart" style="color: rgba(255, 0, 108, 0.69);"></i>
+					by <b><a href="https://github.com/oppytut" style="text-decoration: none; color: rgba(135, 135, 135, 0.91);" target="_blank">Oppytut</a></b>
 				</div>
 			</div>
 		</div>

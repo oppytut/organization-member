@@ -8,10 +8,15 @@
 
 @section('content')
 	<div class="row">
-		<div class="col" style="padding: 30px 10px 30px 10px; background: white; font-size: 13px; min-height: 650px;">
-			<table id="example" class="table table-hover table-borderless table-responsive-sm">
+		<div class="col" style="
+			padding: 15px 10px 0px 10px;
+			background: white;
+			min-height: 580px;
+			font-size: 12px;
+		">
+			<table id="example" class="table table-hover table-borderless table-responsive-sm" style="font-size: 12px;">
 				<thead class="thead-light">
-					<tr>
+					<tr class="text-center">
 						<!-- looping member column option -->
 						@foreach($member_options as $option)
 							<!-- is other option exist? -->
@@ -28,6 +33,9 @@
 								<th>{{ $option->column_view }}</th>
 							@endif
 						@endforeach
+
+						<!-- action -->
+						<th>Action</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -65,6 +73,11 @@
 									<td>{{ $field_value }}</td>
 								@endif
 							@endforeach
+
+							<!-- action -->
+							<td class="text-center align-middle" style="padding: 5px;">
+								<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#viewMemberModal" style="font-size: 11px;">View</button>
+							</td>
 						</tr>
 					@endforeach
 				</tbody>
@@ -72,6 +85,9 @@
 		</div>
 	</div>
 @endsection
+
+<!-- Modal -->
+@include('viewMemberModal')
 
 @section('js')
 	<script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.16/datatables.min.js"></script>
