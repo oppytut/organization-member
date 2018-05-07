@@ -40,15 +40,15 @@
 			<!-- Footer -->
 			<div class="row">
 				<div class="col text-center" style="
-					background: #ebebeb;
-					color: #9e9e9e;
+					background: #dfdfdf;
+					color: #676767;
 					font-size: 12px;
-					height: 50px;
-					padding: 10px;
+					height: 60px;
+					padding: 15px;
 				">
 					Handcrafted with
 					<i class="fas fa-heart" style="color: #ff006c;"></i>
-					by <b><a href="https://github.com/oppytut" style="text-decoration: none; color: #9e9e9e;" target="_blank">Oppytut</a></b>
+					by <b><a href="https://github.com/oppytut" style="text-decoration: none; color: #676767;" target="_blank">Oppytut</a></b>
 				</div>
 			</div>
 		</div>

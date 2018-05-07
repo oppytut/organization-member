@@ -12,24 +12,57 @@
 			<table id="example" class="table table-hover table-borderless table-responsive-sm">
 				<thead class="thead-light">
 					<tr>
-						<!-- Looping columns -->
-						@foreach($readable_member_columns as $column_name)
-							<!-- Printing column name that not has ' Img' code -->
-							@if(!(strpos($column_name, ' Img') !== false))
-								<th>{{ $column_name }}</th>
+						<!-- looping member column option -->
+						@foreach($member_options as $option)
+							<!-- is other option exist? -->
+							@if(isset($option->other))
+								<!-- decode json to object -->
+								@php($other_options = json_decode($option->other))
+
+								<!-- check hidden option -->
+								@if(!isset($other_options->hidden) || !$other_options->hidden)
+									<th>{{ $option->column_view }}</th>
+								@endif
+							@else
+								<!-- print column view -->
+								<th>{{ $option->column_view }}</th>
 							@endif
 						@endforeach
 					</tr>
 				</thead>
 				<tbody>
-					<!-- Looping members data -->
+					<!-- looping member (record) -->
 					@foreach($members as $member)
 						<tr>
-							<!-- Looping columns -->
-							@foreach($member_columns as $column_name)
-								<!-- Printing column name that not has '_img' code -->
-								@if(!(strpos($column_name, '_img') !== false))
-									<td>{{ $member->{$column_name} }}</td>
+							<!-- looping member column option  -->
+							@foreach($member_options as $option)
+								<!-- define field value -->
+								@php($field_value = $member->{$option->column_name})
+
+								<!-- is other option exist? -->
+								@if(isset($option->other))
+									<!-- decode json to object -->
+									@php($other_options = json_decode($option->other))
+
+									@switch($other_options->kind)
+										@case('url')
+											<!-- if not hidden -->
+											@if(!$other_options->hidden)
+												<td>{{ $field_value }}</td>
+											@endif
+											@break
+
+										@case('date')
+											<!-- use defined format -->
+											<td>{{ date_format(date_create($field_value), $other_options->dateFormat) }}</td>
+											@break
+
+										@default
+											<!-- by default, data is displayed -->
+											<td>{{ $field_value }}</td>
+									@endswitch
+								@else
+									<td>{{ $field_value }}</td>
 								@endif
 							@endforeach
 						</tr>
