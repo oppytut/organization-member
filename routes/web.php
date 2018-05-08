@@ -12,3 +12,5 @@
 */
 
 Route::get('/', 'Main');
+
+Route::get('/view-member/{id_member}', 'Main@viewMember');

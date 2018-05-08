@@ -15,15 +15,12 @@
 		<link rel="stylesheet" href="/css/main.css">
 		@yield('css')
 	</head>
-	<body style="background: #e3e3e3;">
+	<body>
 		<div class="container-fluid">
 			<!-- Header -->
 			<div class="row">
 				<div class="col" style="padding: 0px;">
-					<nav class="navbar navbar-light" style="
-						background-color: #4cb6e0;
-						height: 60px;
-					">
+					<nav class="navbar navbar-light" style="background-color: #4cb6e0; height: 60px;">
 						<a class="navbar-brand" href="/" style="color: white; font-size: 15px;">
 							<img src="/icon/24x24.png" alt="">
 							<span class="align-middle">
@@ -39,16 +36,10 @@
 
 			<!-- Footer -->
 			<div class="row">
-				<div class="col text-center" style="
-					background: #dfdfdf;
-					color: rgba(135, 135, 135, 0.91);
-					font-size: 12px;
-					height: 50px;
-					padding: 10px;
-				">
+				<div class="col text-center" style="background: #e3e3e3; color: #818181; font-size: 12px; height: 50px; padding: 10px;">
 					Handcrafted with
 					<i class="fas fa-heart" style="color: rgba(255, 0, 108, 0.69);"></i>
-					by <b><a href="https://github.com/oppytut" style="text-decoration: none; color: rgba(135, 135, 135, 0.91);" target="_blank">Oppytut</a></b>
+					by <b><a href="https://github.com/oppytut" style="text-decoration: none; color: #818181;" target="_blank">Oppytut</a></b>
 				</div>
 			</div>
 		</div>
