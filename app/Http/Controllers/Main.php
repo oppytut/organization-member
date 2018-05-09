@@ -18,13 +18,13 @@ class Main extends Controller
 		$members = Member::all();
 
 		// retriving member column options
-		$member_options = Member_option::all();
+		$member_options = Member_option::where('hide_at_list', 0)
+			->orWhere('hide_at_list', NULL)
+			->get();
 
 		// retriving options
-		$options = (object) [
-			'number_column' => Option::where('name', 'number_column')->first(),
-			'number_column_name' => Option::where('name', 'number_column_name')->first()
-		];
+		$options = Option::where('page', 'list_member')
+			->pluck('value', 'name'); // as array
 
 		return view('listMembers', [
 			'members' => $members,
@@ -41,12 +41,13 @@ class Main extends Controller
 		$member = Member::find($id_member);
 
 		// retriving member column options
-		$member_options = Member_option::all();
+		$member_options = Member_option::where('hide_at_view', 0)
+			->orWhere('hide_at_view', NULL)
+			->get();
 
 		// retriving options
-		$options = (object) [
-			'profile_picture' => Option::where('name', 'profile_picture')->first()
-		];
+		$options = Option::where('page', 'view_member')
+			->pluck('value', 'name'); // as array
 
 		return view('viewMember', [
 			'member' => $member,

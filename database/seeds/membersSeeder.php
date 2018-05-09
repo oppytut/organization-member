@@ -16,12 +16,12 @@ class membersSeeder extends Seeder
 		$faker = Faker::create();
 		for ($i = 1; $i <= 10; $i++) {
 			DB::table('members')->insert([
-				'nama' => $faker->name(),
-				'tempat_lahir' => $faker->city,
-				'tanggal_lahir' => $faker->date($format = 'Y-m-d', $max = '2000-01-01'),
-				'nomor_telepon' => $faker->phoneNumber,
-				'alamat' => $faker->streetAddress,
-				'foto_img' => $faker->imageUrl(50, 50, 'people')
+				'name' => $faker->name(),
+				'place_of_birth' => $faker->city,
+				'date_of_birth' => $faker->date($format = 'Y-m-d', $max = '2000-01-01'),
+				'phone_number' => $faker->phoneNumber,
+				'address' => $faker->streetAddress,
+				'photo' => $faker->imageUrl(200, 200, 'people')
 			]);
 		}
 	}

@@ -14,25 +14,13 @@
 				<thead class="thead-light text-center">
 					<tr>
 						<!-- column number -->
-						@if($options->number_column->value === 'true')
-							<th>{{ $options->number_column_name->value }}</th>
+						@if($options['number_column'] === 'enabled')
+							<th>{{ $options['number_column_name'] }}</th>
 						@endif
 
 						<!-- looping member column option -->
-						@foreach($member_options as $option)
-							<!-- is other option exist? -->
-							@if(isset($option->other))
-								<!-- decode json to object -->
-								@php($other_options = json_decode($option->other))
-
-								<!-- check hidden option -->
-								@if(!isset($other_options->hidden) || !$other_options->hidden)
-									<th>{{ $option->column_view }}</th>
-								@endif
-							@else
-								<!-- print column view -->
-								<th>{{ $option->column_view }}</th>
-							@endif
+						@foreach($member_options as $column_option)
+							<th>{{ $column_option->column_view }}</th>
 						@endforeach
 
 						<!-- action -->
@@ -44,31 +32,22 @@
 					@foreach($members as $key => $member)
 					<tr>
 						<!-- column number -->
-						@if($options->number_column->value === 'true')
+						@if($options['number_column'] === 'enabled')
 							<td class="text-center">{{ $key + 1 }}</td>
 						@endif
 
 						<!-- looping member column option  -->
-						@foreach($member_options as $option)
+						@foreach($member_options as $column_option)
 							<!-- define field value -->
-							@php($field_value = $member->{$option->column_name})
+							@php($field_value = $member->{$column_option->column_name})
 
-							<!-- is other option exist? -->
-							@if(isset($option->other))
-								<!-- decode json to object -->
-								@php($other_options = json_decode($option->other))
-
-								@switch($other_options->kind)
-									@case('url')
-										<!-- if not hidden -->
-										@if(!$other_options->hidden)
-											<td>{{ $field_value }}</td>
-										@endif
-									@break
-
+							<!-- is as exist? -->
+							@if(isset($column_option->as))
+								@switch($column_option->as)
 									@case('date')
 										<!-- use defined format -->
-										<td>{{ date_format(date_create($field_value), $other_options->dateFormat) }}</td>
+										@php($dateFormat = json_decode($column_option->other)->dateFormat)
+										<td>{{ date_format(date_create($field_value), $dateFormat) }}</td>
 									@break
 
 									@default
